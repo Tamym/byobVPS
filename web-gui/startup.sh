@@ -59,14 +59,14 @@ docker build -f Dockerfile-py3-win32 -t win-x32 .
 read -p "To use some Byob features, you must reboot your system. If this is not your first time running this script, please answer no. Reboot now? [Y/n]: " agreeTo
 #Reboots system if user answers Yes
 case $agreeTo in
-    y|Y|yes|Yes|YES)
+    YES|yes|Yes|y|Y)
     echo "Rebooting..."
     sleep 1
     sudo reboot now
     exit
     ;;
 #Runs app if user answers No
-    n|N|no|No|NO)
+    NO|no|No|n|N)
     cd ..
     echo "Running C2 server with locally hosted web app GUI...";
     echo "Navigate to http://127.0.0.1:5000 and set up your user to get started.";
